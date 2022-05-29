@@ -1,21 +1,20 @@
 //
-// Created by k00535555 on 5/28/2022.
+// Created by akokoshn on 5/28/2022.
 //
 
-#include "device_driver.h"
+#ifndef CROSSFITTIMER_DEVICE_DRIVER_H
 
-std::vector<DeviceDescriptor> getDevices()
-{
-    std::vector<DeviceDescriptor> list;
-    return list;
-}
+#include <string>
+#include <vector>
 
-int sparing(const std::string &name)
-{
-    return 0;
-}
+struct DeviceDescriptor {
+std::string name;
+};
 
-int getHR()
-{
-    return 0;
-}
+std::vector<DeviceDescriptor> getDevices();
+int sparing(const std::string &name);
+int getHR();
+
+#define CROSSFITTIMER_DEVICE_DRIVER_H
+
+#endif //CROSSFITTIMER_DEVICE_DRIVER_H
