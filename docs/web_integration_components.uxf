@@ -1,0 +1,12 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>V8 thech</help_text><element><id>UMLUseCase</id><coordinates><x>40</x><y>50</y><w>120</w><h>40</h></coordinates><panel_attributes>cloud server
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>130</x><y>320</y><w>220</w><h>90</h></coordinates><panel_attributes>web client
+ (mirror device with Android OS)
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>570</x><y>350</y><w>120</w><h>40</h></coordinates><panel_attributes>hardrate monitor
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>160</x><y>430</y><w>170</w><h>70</h></coordinates><panel_attributes>HTML page
+with java script calls of API
+bg=#ffffff</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>490</y><w>180</w><h>140</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;V8 technology&gt;&gt;</panel_attributes><additional_attributes>30;10;120;80;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>360</y><w>430</w><h>300</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;native protocol (bluetooth, ANT, etc )&gt;&gt;</panel_attributes><additional_attributes>250;10;180;230;10;280</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>90</y><w>160</w><h>250</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;http/https&gt;&gt;</panel_attributes><additional_attributes>10;10;130;230</additional_attributes></element><element><id>UMLNote</id><coordinates><x>160</x><y>610</y><w>170</w><h>70</h></coordinates><panel_attributes>Native library
+"libdevice_driver.so"
+bg=#ff0000</panel_attributes><additional_attributes></additional_attributes></element></diagram>
