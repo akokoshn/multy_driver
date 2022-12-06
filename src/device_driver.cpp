@@ -15,7 +15,14 @@ int sparing(const std::string &name)
     return 0;
 }
 
-int getHR()
+bool isConnected()
 {
-    return 0;
+    return false;
+}
+
+DeviceData getData()
+{
+    DeviceData data;
+    data.HR = 0;
+    return data;
 }

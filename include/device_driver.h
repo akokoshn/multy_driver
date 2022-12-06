@@ -7,13 +7,12 @@
 #include <string>
 #include <vector>
 
-struct DeviceDescriptor {
-std::string name;
-};
+#include "internal_types.h"
 
 std::vector<DeviceDescriptor> getDevices();
 int sparing(const std::string &name);
-int getHR();
+bool isConnected();
+DeviceData getData();
 
 #define CROSSFITTIMER_DEVICE_DRIVER_H
 

@@ -11,7 +11,15 @@ Shared library for connet with different type of sport devices
 ```
   Try connect to the device devined by name, returns 0 in case of sucess
 ```
-* **int getHR()**
+* **DeviceData getData()**
 ```
-  Returns the latest HR info from the connected device, 0 if no devices connected
+  Returns the latest data from the connected device, 0 if no devices connected
+```
+## Build:
+```
+  build.sh <path to android NDK> <path to ninja>
+```
+## Test:
+```
+  test.sh <path ADB>
 ```
