@@ -3,10 +3,12 @@
 //
 
 #include "device_driver.h"
+#include "device_manager.h"
 
 std::vector<DeviceDescriptor> getDevices()
 {
     std::vector<DeviceDescriptor> list;
+    list = DeviceManager::getInstance()->findDevices();
     return list;
 }
 

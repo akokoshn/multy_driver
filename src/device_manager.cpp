@@ -5,14 +5,27 @@
 #include <string>
 
 #include "device_manager.h"
+#include "bluetooth_adapter.h"
+
+DeviceManager* DeviceManager::instance = NULL;
 
 DeviceManager::DeviceManager()
 {
 	device = std::make_shared<Device>();
+	adapter = std::shared_ptr<Adapter>((Adapter*)(new BluetoothAdapter()));
+}
+
+DeviceManager* DeviceManager::getInstance()
+{
+	if (!instance) {
+		instance = new DeviceManager();
+	}
+	return instance;
 }
 
 std::vector<DeviceDescriptor> DeviceManager::findDevices()
 {
+	descriptors = adapter->findDevices();
 	return descriptors;
 }
 

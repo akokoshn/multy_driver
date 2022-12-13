@@ -1,0 +1,2 @@
+C:/Repositories/multy_driver/lib/libdevice_driver.so
+C:/Repositories/multy_driver/bin/test

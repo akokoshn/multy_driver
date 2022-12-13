@@ -1,0 +1,12 @@
+.gradle
+.idea
+**/*.iml
+bin
+lib
+.vs
+*.ninja
+*.ninja_deps
+*.ninja_log
+*.cmake
+device_monitor/.google
+device_monitor/app/.cxx

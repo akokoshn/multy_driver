@@ -17,7 +17,7 @@ Shared library for connet with different type of sport devices
 ```
 ## Build:
 ```
-  build.sh <path to android NDK> <path to ninja>
+  build.sh <path to android NDK> <path to ninja> <path to android tree>
 ```
 ## Test:
 ```
