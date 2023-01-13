@@ -16,23 +16,23 @@ bool isConnected();
 DeviceData getData();
 
 #include "android.h"
-#include "java_helper.h"
 
-JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved) {
+/*JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved) {
     LOGI("OnLoad: vm = %p\n", vm);
     return JNI_VERSION_1_6;
-}
-
-JNIEnv* JavaHelper::env = NULL;
+}*/
 
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_devicemonitor_MainActivity_getDevices(JNIEnv* env,
     jobject instance)
 {
     LOGI("getDevices: env = %p\n", env);
-    JavaHelper::setEnv(env);
-    getDevices();
-    return env->NewStringUTF("none\n");
+    std::vector<DeviceDescriptor> devices = getDevices();
+    std::string res = "Names: ";
+    for (const auto& it : devices) {
+        res += it.name;
+    }
+    return env->NewStringUTF(res.c_str());
 }
 
 #define DEVICE_DRIVER_H

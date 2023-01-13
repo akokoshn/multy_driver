@@ -3,12 +3,10 @@
 //
 
 #include "bluetooth_adapter.h"
-#include "java_helper.h"
 
-std::vector<DeviceDescriptor> BluetoothAdapter::findDevices()
+bool BluetoothAdapter::findDevices(std::vector<DeviceDescriptor>& deviceDescriptors)
 {
-    printf("findDevices\n");
-    return JavaHelper::findDevices();
+    return true;
 }
 
 BluetoothAdapter::~BluetoothAdapter()

@@ -12,7 +12,7 @@ DeviceManager* DeviceManager::instance = NULL;
 DeviceManager::DeviceManager()
 {
 	device = std::make_shared<Device>();
-	adapter = std::shared_ptr<Adapter>((Adapter*)(new BluetoothAdapter()));
+    adapter = std::shared_ptr<Adapter>((Adapter*)(new BluetoothAdapterNativeAndroid()));
 }
 
 DeviceManager* DeviceManager::getInstance()
@@ -25,7 +25,7 @@ DeviceManager* DeviceManager::getInstance()
 
 std::vector<DeviceDescriptor> DeviceManager::findDevices()
 {
-	descriptors = adapter->findDevices();
+	adapter->findDevices(descriptors);
 	return descriptors;
 }
 

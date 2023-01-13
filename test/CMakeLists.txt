@@ -14,7 +14,10 @@ target_include_directories(test PUBLIC
 
 target_link_directories(test PUBLIC ${CMAKE_CURRENT_LIST_DIR}/../lib)
 
-target_link_libraries(test device_driver)
+target_link_libraries(test PRIVATE
+    device_driver
+    log
+)
 
 set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_LIST_DIR})
 install(TARGETS test DESTINATION bin)

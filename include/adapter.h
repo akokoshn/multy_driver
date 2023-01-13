@@ -10,7 +10,7 @@
 class Adapter
 {
 public:
-	virtual std::vector<DeviceDescriptor> findDevices() = 0;
+	virtual bool findDevices(std::vector<DeviceDescriptor>& deviceDescriptors) = 0;
 	virtual ~Adapter() = 0;
 };
 
